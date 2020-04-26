@@ -275,7 +275,7 @@ function bpf_compile()
 	      -DHANDLE_NS						\
 	      $EXTRA_OPTS						\
 	      -c $LIB/$IN -o - |					\
-	llc -march=bpf -mcpu=probe -mattr=dwarfris -filetype=$TYPE -o $OUT
+	llc -march=bpf -mcpu=v2 -mattr=dwarfris -filetype=$TYPE -o $OUT
 }
 
 function xdp_load()

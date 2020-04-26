@@ -69,7 +69,7 @@ var (
 	standardCFlags = []string{"-O2", "-target", "bpf",
 		fmt.Sprintf("-D__NR_CPUS__=%d", runtime.NumCPU()),
 		"-Wno-address-of-packed-member", "-Wno-unknown-warning-option"}
-	standardLDFlags = []string{"-march=bpf", "-mcpu=probe"}
+	standardLDFlags = []string{"-march=bpf", "-mcpu=v2"}
 
 	endpointPrefix   = "bpf_lxc"
 	endpointProg     = fmt.Sprintf("%s.%s", endpointPrefix, outputSource)
